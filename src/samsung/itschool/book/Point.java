@@ -3,21 +3,17 @@ package samsung.itschool.book;
 import java.util.Scanner;
 
 public class Point {
-    // координаты точки
     double x,y;
 
-    // Метод выводящий точку на экран в формате: (x;y)
     void printPoint() {
             System.out.println("("+x+"; "+y+")");
     }
 
-    // Метод перемещающий точку на dx и dy
     void move(double dx, double dy) {
             x += dx;
             y += dy;
     }
 
-    // Метод для задания новых координат точки 
     void input() {
             Scanner in = new Scanner(System.in);
             System.out.print("Enter x: ");
@@ -27,7 +23,6 @@ public class Point {
             move(x,y);
     }
 
-    // Метод вычисления расстояния между точками
     double getDistance(Point a) {
             return Math.sqrt( Math.pow(x-a.x, 2) + Math.pow(y-a.y, 2) );
     }
